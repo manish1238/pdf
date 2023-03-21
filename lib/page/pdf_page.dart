@@ -15,10 +15,11 @@ class PdfPage extends StatefulWidget {
 
 class _PdfPageState extends State<PdfPage> {
   @override
-  Widget build(BuildContext context) => Scaffold(
+  Widget build(BuildContext context) =>
+      Scaffold(
         backgroundColor: Colors.black,
         appBar: AppBar(
-          title: Text(MyApp.title),
+          title: Text('Payslip'),
           centerTitle: true,
         ),
         body: Container(
@@ -40,70 +41,122 @@ class _PdfPageState extends State<PdfPage> {
 
                     final invoice = Invoice(
                       supplier: Supplier(
-                        name: 'Sarah Field',
-                        address: 'Sarah Street 9, Beijing, China',
+                        name: 'Manish Saxena',
+                        address: 'Street 19, India Delhi',
                         paymentInfo: 'https://paypal.me/sarahfieldzz',
                       ),
                       customer: Customer(
-                        name: 'Apple Inc.',
-                        address: 'Apple Street, Cupertino, CA 95014',
+                        name: 'Iconex Exhibition',
+                        address: 'delhi east of kailash, delhi, india',
                       ),
                       info: InvoiceInfo(
-                        date: date,
-                        dueDate: dueDate,
-                        description: 'My description...',
-                        number: '${DateTime.now().year}-9999',
+                        name: 'Manish Saxena',
+                        designation: 'Flutter Developer',
+                        bank: 'Federal Bank.',
+                        accountNo: '909090909090090',
+                        empId: 'TEC1011',
+                        month:'December' ,
+                        workingDays:'365' ,
                       ),
                       items: [
+                        // InvoiceItem(
+                        //   description: 'Employee Id',
+                        //   date: 'TEC101',
+                        //   quantity: 'Joining Date',
+                        //   vat:  'Joining Date',
+                        //   unitPrice:'9 Sept 2022',
+                        // ),
+                        // InvoiceItem(
+                        //   description: 'Employee Name',
+                        //   date: 'Manish Saxena',
+                        //   quantity: 'Designation',
+                        //   vat:  'Flutter Developer',
+                        //   unitPrice:'9 Sept 2022',
+                        // ),
+                        //   InvoiceItem(
+                        //   description: 'Provident Fund No.',
+                        //   date: 'TEC101',
+                        //   quantity: 'ESCI No.',
+                        //   vat:  'Jasdfsd',
+                        //   unitPrice:'9 Sept 2022',
+                        // ),
+                        // InvoiceItem(
+                        //   description: 'Bank Name',
+                        //   date: 'Federal Bank',
+                        //   quantity: 'Account No',
+                        //   vat:  'ADE99997990D',
+                        //   unitPrice:'9 Sept 2022',
+                        // ),
+                        // InvoiceItem(
+                        //   description: 'Total Working Days',
+                        //   date: '20',
+                        //   quantity: 'Payable Days',
+                        //   vat:  '20',
+                        //   unitPrice:'9 Sept 2022',
+                        // ),
                         InvoiceItem(
-                          description: 'Coffee',
-                          date: DateTime.now(),
-                          quantity: 3,
-                          vat: 0.19,
-                          unitPrice: 5.99,
+                            description: 'Basic Wage',
+                            date: '20,000',
+                            quantity: 'PF',
+                            vat: '20,000',
+                            unitPrice: 5.99.toString(),
                         ),
                         InvoiceItem(
-                          description: 'Water',
-                          date: DateTime.now(),
-                          quantity: 8,
-                          vat: 0.19,
-                          unitPrice: 0.99,
+                          description: 'HRA',
+                          date: "5000",
+                          quantity:'TDS',
+                          vat:'0',
+                          unitPrice: 0.99.toString(),
                         ),
                         InvoiceItem(
-                          description: 'Orange',
-                          date: DateTime.now(),
-                          quantity: 3,
-                          vat: 0.19,
-                          unitPrice: 2.99,
+                          description: 'Reimbursement',
+                          date: '10,000',
+                          quantity: '',
+                          vat:'',
+                          unitPrice: '0.0',
                         ),
-                        InvoiceItem(
-                          description: 'Apple',
-                          date: DateTime.now(),
-                          quantity: 8,
-                          vat: 0.19,
-                          unitPrice: 3.99,
+                         InvoiceItem(
+                          description: 'Special Allowance',
+                          date: '0.0',
+                          quantity: '',
+                          vat:'',
+                          unitPrice: '0.0',
                         ),
-                        InvoiceItem(
-                          description: 'Mango',
-                          date: DateTime.now(),
-                          quantity: 1,
-                          vat: 0.19,
-                          unitPrice: 1.59,
-                        ),
-                        InvoiceItem(
-                          description: 'Blue Berries',
-                          date: DateTime.now(),
-                          quantity: 5,
-                          vat: 0.19,
-                          unitPrice: 0.99,
-                        ),
-                        InvoiceItem(
-                          description: 'Lemon',
-                          date: DateTime.now(),
-                          quantity: 4,
-                          vat: 0.19,
-                          unitPrice: 1.29,
-                        ),
+
+                        // details(
+                        //   employeeId: 'employeeId',
+                        //     employeeName: 'employeeName',
+                        //     pfNumber: 'pfNumber',
+                        //     bankName: 'bankName',
+                        //     totalWorkingDays:
+                        //     'totalWorkingDays',
+                        //     joiningDate: 'joiningDate',
+                        //     designation: 'designation',
+                        //     esciNumber: 'esciNumber',
+                        //     accountNumber: 'accountNumber',
+                        //     payableDays: 'payableDays',
+                        // )
+                        // InvoiceItem(
+                        //   description: 'Mango',
+                        //   date: DateTime.now(),
+                        //   quantity: 1,
+                        //   vat: 0.19,
+                        //   unitPrice: 1.59,
+                        // ),
+                        // InvoiceItem(
+                        //   description: 'Blue Berries',
+                        //   date: DateTime.now(),
+                        //   quantity: 5,
+                        //   vat: 0.19,
+                        //   unitPrice: 0.99,
+                        // ),
+                        // InvoiceItem(
+                        //   description: 'Lemon',
+                        //   date: DateTime.now(),
+                        //   quantity: 4,
+                        //   vat: 0.19,
+                        //   unitPrice: 1.29,
+                        // ),
                       ],
                     );
 

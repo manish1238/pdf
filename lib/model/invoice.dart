@@ -16,25 +16,31 @@ class Invoice {
 }
 
 class InvoiceInfo {
-  final String description;
-  final String number;
-  final DateTime date;
-  final DateTime dueDate;
+  final String name;
+  final String designation;
+  final String bank;
+  final String accountNo;
+  final String month;
+  final String workingDays;
+  final String empId;
 
   const InvoiceInfo({
-    required this.description,
-    required this.number,
-    required this.date,
-    required this.dueDate,
+    required this.name,
+    required this.designation,
+    required this.bank,
+    required this.accountNo,
+    required this.month,
+    required this.workingDays,
+    required this.empId,
   });
 }
 
 class InvoiceItem {
   final String description;
-  final DateTime date;
-  final int quantity;
-  final double vat;
-  final double unitPrice;
+  final String date;
+  final String quantity;
+  final String vat;
+  final String unitPrice;
 
   const InvoiceItem({
     required this.description,
